@@ -51,8 +51,8 @@ def test():
         family_objects.append(obj)
 
     for i in family_objects:
-        print "id = " + str(id(i))
-        print i.get_genetic_info()
+        print("id = " + str(id(i)))
+        print(i.get_genetic_info())
     print("similar id's says that they are same objects")
 
 if __name__ == '__main__':
