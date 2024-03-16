@@ -28,11 +28,11 @@ class Families(object):
         """I have to capture the details before the class is created, __init__
         is pseudo constructor."""
         try:
-            id = cls.family[family_id]
+            id_ = cls.family[family_id]
         except KeyError:
-            id = object.__new__(cls)
-            cls.family[family_id] = id
-        return id
+            id_ = object.__new__(cls)
+            cls.family[family_id] = id_
+        return id_
 
     def set_genetic_info(self, genetic_info):
         cg = ComplexGenetics()
@@ -53,7 +53,7 @@ def test():
     for i in family_objects:
         print "id = " + str(id(i))
         print i.get_genetic_info()
-    print "similar id's says that they are same objects "
+    print("similar id's says that they are same objects")
 
 if __name__ == '__main__':
     test()
